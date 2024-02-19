@@ -1,0 +1,3 @@
+C:/Projects/lab1DBnew/cmake-build-debug/CMakeFiles/lab1DBnew.dir
+C:/Projects/lab1DBnew/cmake-build-debug/CMakeFiles/edit_cache.dir
+C:/Projects/lab1DBnew/cmake-build-debug/CMakeFiles/rebuild_cache.dir
