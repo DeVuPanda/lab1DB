@@ -55,13 +55,11 @@ void getClientInfo(string& name, string& address, string& number, string& dateOf
     cin >> dateOfB;
 }
 
-void getOrderInfo(string& dateOfArr, int& days, string& description){
-    cout << "Enter date of arrival" << endl;
+void getOrderInfo(string& dateOfArr, int& days, string& desired_item){
+    cout << "Enter desired date of arrival" << endl;
     cin >> dateOfArr;
-    cout << "Enter amount of days" << endl;
-    cin >> days;
-    cout << "Enter description" << endl;
-    cin >> description;
+    cout << "Enter desired item" << endl;
+    cin >> desired_item;
 }
 
 void getOptions(){
@@ -230,6 +228,13 @@ void deleteOrder(int clientId, int orderID){
 
 int main() {
 
+        FILE* IndexDB = fopen("clientIndex.bin", "wb");
+        fclose(IndexDB);
+        FILE* ordersDB = fopen("orders.bin", "wb");
+        fclose(ordersDB);
+        FILE* cliDb = fopen("clients.bin", "wb");
+        fclose(cliDb);
+
     Client client;
     Order order;
     Identificator index;
@@ -289,7 +294,7 @@ int main() {
                     order.days = days;
                     order.clientId = id;
                     strcpy(order.dateOfArrival, dateOfArr.c_str());
-                    strcpy(order.description, description.c_str());
+                    strcpy(order.desired_item, description.c_str());
                     addOrder(order, id);
                 }
                 break;
@@ -324,7 +329,7 @@ int main() {
                             getOrderInfo(dateOfArr, days, description);
                             order.days = days;
                             strcpy(order.dateOfArrival, dateOfArr.c_str());
-                            strcpy(order.description, description.c_str());
+                            strcpy(order.desired_item, description.c_str());
                             writeOrder(order, id - 1);
                             cout << "order updated" << endl;
                         }
@@ -356,7 +361,7 @@ int main() {
                     order = getOrder(i);
                     if (order.orderID != -1) {
                         cout << "order id: " << order.orderID << endl;
-                        cout << "description: " << order.description << endl;
+                        cout << "desired item: " << order.desired_item << endl;
                         cout << endl;
                     }
                 }
@@ -374,7 +379,7 @@ int main() {
                             order = getOrder(i);
                             if (id == order.clientId){
                                 cout << "order id: " << order.orderID << endl;
-                                cout << "description: " << order.description << endl;
+                                cout << "desired item: " << order.desired_item << endl;
                             }
                         }
                     } else cout << "This client has no orders" << endl;

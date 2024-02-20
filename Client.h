@@ -1,5 +1,3 @@
-
-
 struct Client{
 public:
     char name[40];
@@ -8,3 +6,5 @@ public:
     char dateOfBirth[40];
     int ordersCounter;
 };
+
+
