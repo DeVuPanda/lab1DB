@@ -55,12 +55,6 @@ build CMakeFiles/lab1DBnew.dir/main.cpp.obj: CXX_COMPILER__lab1DBnew_unscanned_D
   OBJECT_DIR = CMakeFiles\lab1DBnew.dir
   OBJECT_FILE_DIR = CMakeFiles\lab1DBnew.dir
 
-build CMakeFiles/lab1DBnew.dir/functions.cpp.obj: CXX_COMPILER__lab1DBnew_unscanned_Debug C$:/Projects/lab1DBnew/functions.cpp || cmake_object_order_depends_target_lab1DBnew
-  DEP_FILE = CMakeFiles\lab1DBnew.dir\functions.cpp.obj.d
-  FLAGS = -g -std=gnu++20 -fdiagnostics-color=always
-  OBJECT_DIR = CMakeFiles\lab1DBnew.dir
-  OBJECT_FILE_DIR = CMakeFiles\lab1DBnew.dir
-
 
 # =============================================================================
 # Link build statements for EXECUTABLE target lab1DBnew
@@ -69,7 +63,7 @@ build CMakeFiles/lab1DBnew.dir/functions.cpp.obj: CXX_COMPILER__lab1DBnew_unscan
 #############################################
 # Link the executable lab1DBnew.exe
 
-build lab1DBnew.exe: CXX_EXECUTABLE_LINKER__lab1DBnew_Debug CMakeFiles/lab1DBnew.dir/main.cpp.obj CMakeFiles/lab1DBnew.dir/functions.cpp.obj
+build lab1DBnew.exe: CXX_EXECUTABLE_LINKER__lab1DBnew_Debug CMakeFiles/lab1DBnew.dir/main.cpp.obj
   FLAGS = -g
   LINK_LIBRARIES = -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
   OBJECT_DIR = CMakeFiles\lab1DBnew.dir

@@ -4,6 +4,5 @@ project(lab1DBnew)
 set(CMAKE_CXX_STANDARD 20)
 
 add_executable(lab1DBnew main.cpp
-        functions.cpp
         Client.h
         Order.h)
