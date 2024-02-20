@@ -237,8 +237,10 @@ int main() {
     int id, clientId, days, amount;
     string name, address, number, dateOfB, dateOfArr, description;
 
-    getOptions();
+
     while(true){
+
+        getOptions();
 
         while(!(cin >> choice)) {
             cin.clear();
@@ -387,6 +389,6 @@ int main() {
                 cout << "Wrong input!" << endl;
                 break;
         }
-        cout << "What do you want to do next?" << endl;
+
     }
 }
