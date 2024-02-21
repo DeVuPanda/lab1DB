@@ -13,6 +13,22 @@ public:
 };
 
 
+void getOptions(){
+
+    cout << "What do you want to do next?" << endl;
+    cout << "1 - Add client" << endl;
+    cout << "2 - Remove client" << endl;
+    cout << "3 - Edit client" << endl;
+    cout << "4 - Add order" << endl;
+    cout << "5 - Remove order" << endl;
+    cout << "6 - Edit order" << endl;
+    cout << "7 - Get list of all clients" << endl;
+    cout << "8 - Get list of all orders" << endl;
+    cout << "9 - Get list of all orders for specific client" << endl;
+    cout << "10 - Exit" << endl;
+}
+
+
 Identificator getClientIndex(int position){
 
     Identificator index;
@@ -60,21 +76,6 @@ void getOrderInfo(string& dateOfArr, int& days, string& desired_item){
     cin >> dateOfArr;
     cout << "Enter desired item" << endl;
     cin >> desired_item;
-}
-
-void getOptions(){
-
-    cout << "What do you want to do next?" << endl;
-    cout << "1 - Add client" << endl;
-    cout << "2 - Remove client" << endl;
-    cout << "3 - Edit client" << endl;
-    cout << "4 - Add order" << endl;
-    cout << "5 - Remove order" << endl;
-    cout << "6 - Edit order" << endl;
-    cout << "7 - Get list of all clients" << endl;
-    cout << "8 - Get list of all orders" << endl;
-    cout << "9 - Get list of all orders for specific client" << endl;
-    cout << "10 - Exit" << endl;
 }
 
 void writeClient(Client& client, int position){
